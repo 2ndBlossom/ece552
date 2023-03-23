@@ -1,0 +1,8 @@
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 21:31:25 on Mar 22,2023
+# ** Error: (vsim-3170) Could not find 'proc_hier_pbench'.
+#         Searched libraries:
+#             /home/pzhang/project/project/demo1/verilog/__work
+# Error loading design
+# End time: 21:31:26 on Mar 22,2023, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
