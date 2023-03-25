@@ -1,13 +1,20 @@
+Reading line: // addiTest
+Reading line: //
+Reading line: // test program for WISC-SP08 architecture
+Reading line: // for the addi instruction.
+Reading line: //
+Reading line: // CS/ECE 552, Spring 2008
+Reading line: // Abhishek Sinkar  15 March 2008
+Reading line: //
+Reading line: 
+Reading line: //Test of producing a zero
+Reading line: lbi r1, 0xff
+Reading line: addi r2, r1, 0x1
+Reading line: halt
 @0
-c0
-7f
-c0
-80
-c0
-00
-c0
-80
-c0
+c1
 ff
+41
+41
 00
 00

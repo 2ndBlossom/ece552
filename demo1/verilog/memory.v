@@ -6,9 +6,22 @@
                      processor.
 */
 `default_nettype none
-module memory (/* TODO: Add appropriate inputs/outputs for your memory stage here*/);
+module memory (
+   input wire clk, rst,
+   input wire HALT,
+   input wire MemRead,
+   input wire MemWrite,
+   input wire [15:0]MemWrite_data,
+   input wire [15:0]alu_result,
+// input wire [15:0]Memaddress
+   output wire [15:0]MemRead_data
 
+);
+//   assign Memaddress=alu_result'
+   wire writeEn;
+   assign writeEn=(MemRead)|(MemWrite);
    // TODO: Your code here
-   
+   //module memory2c (data_out, data_in, addr, enable, wr, createdump, clk, rst);
+   memory2c mmc(.data_out(MemRead_data), .data_in(MemWrite_data), .addr(alu_result), .enable(writeEn), .wr(MemWrite), .createdump(HALT), .clk(clk), .rst(rst));
 endmodule
 `default_nettype wire
